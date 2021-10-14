@@ -1,0 +1,93 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\pagestyle{empty}
+\usepackage{setspace}
+\usepackage{gensymb}
+\singlespacing
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\begin{document}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\cmyvec}[1]{\ensuremath{\begin{pmatrix*}[c]#1\end{pmatrix*}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\newcommand{\proj}[2]{\textbf{proj}_{\vec{#1}}\vec{#2}}
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+
+\title{
+Assignment - 2
+}
+\author{ Prasanna Kumar R - SM21MTECH14001}
+\maketitle
+\newpage
+\bigskip
+\bibliographystyle{IEEEtran}
+\section*{\textbf{Problem}}
+\noindent
+\textbf{Perpendiculars PL , PM are drawn from P $(h,k)$ on the axes OL,OM. Show that the length of the perpendicular from P on the LM is $hk \sin^2 {\omega} / \sqrt{h^2+k^2+2hk \cos{\omega}}$ and that the equation of the perpendicular is $h(x-h)=k(y-k) $} 
+\section*{\textbf{Solution}}
+Let PQ be the perpendicular from P on LM, then
+
+Area of $\triangle$ PLM is given as ,
+\begin{align}
+   \frac{1}{2} {\left\|\mathbf{L-M}\right\|} {\left\|\mathbf{P-Q}\right\|}
+\end{align}
+Again, taking PM as base and L as vertex,
+Area of $\triangle$ PLM is given as ,
+\begin{align}
+  \frac{1}{2} {\left\|\mathbf{P-M}\right\|} {\left\|\mathbf{P-L}\right\|} \sin{\measuredangle{LPM}}
+\end{align}
+As $\measuredangle{LPM}= 180^{\circ}- \omega $, by (1) and (2) we get,
+\begin{align}
+     \frac{1}{2} {\left\|\mathbf{L-M}\right\|} {\left\|\mathbf{P-Q}\right\|}= \frac{1}{2} {\left\|\mathbf{P-M}\right\|} {\left\|\mathbf{P-L}\right\|} \sin{\measuredangle{LPM}}
+\end{align}
+Here,
+\begin{align*}
+{\left\|\mathbf{L-M}\right\|} &= \sin{\omega} \sqrt{h^2+k^2+2hk \cos{\omega}} \\[6pt]
+{\left\|\mathbf{P-M}\right\|} &= k \sin{\omega} \\[6pt]
+{\left\|\mathbf{P-L}\right\|} &= h \sin{\omega} \\[6pt]
+\end{align*}
+\begin{align}
+\begin{split}
+    (\sin{\omega} \sqrt{h^2+k^2+2hk \cos{\omega}}) {\left\|\mathbf{P-Q}\right\|} &= \\  k \sin{\omega} \ h \sin{\omega} \  \sin{(180^{\circ}- \omega)} \\[6pt]
+    {\left\|\mathbf{P-Q}\right\|} &= \\ \frac{hk \sin^2 {\omega}}{\sqrt{h^2+k^2+2hk \cos{\omega}}}
+\end{split}
+\end{align}
+Equation of LM is,
+\begin{align}
+\begin{split}
+ \frac{x}{\vec{OM}}+ \frac{y}{\vec{OL}} = 1   \\
+ \frac{x}{h+ k \cos{\omega}}+ \frac{y}{k+ h\cos{\omega} } = 1
+\end{split}
+\end{align}
+Equation of any line through $(h,k)$ will be, 
+\begin{align}
+    \begin{split}
+        y-k= m (x-h)
+    \end{split}
+\end{align}
+As lines LM and PQ are perpendicular, 
+\begin{align}
+    \begin{split}
+        1+ \left(m -\frac{k+ h\cos{\omega}}{h+ k \cos{\omega}}\right)\cos{\omega}- m \left(\frac{k+ h\cos{\omega}}{h+ k \cos{\omega}}\right) =0 
+    \end{split}
+\end{align}
+Solving the above equation, $$m= \frac{h}{k}$$
+Substituting $m$ in (7), we get
+\begin{align}
+\begin{split}
+(y-k)= \frac{h}{k} (x-h) \\
+\Rightarrow h(x-h)= k(y-k)
+\end{split}
+\end{align}
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=8cm]{123.jpg}
+    \caption{Diagram}
+    \label{fig:galaxy}
+\end{figure}
+\end{document}
